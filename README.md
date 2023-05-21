@@ -7,12 +7,12 @@ This project is to build a near real-time ETL pipeline for a recruitment company
 
 ## Dataset
 Since it mainly focuses on building the ETL pipeline so the dataset used for processing is faked from the customer's schema.
-- [CassandraDB (DataLake)]()
-- [MySQLDB (Data Warehouse)]()
+- [CassandraDB (using as a DataLake)](https://github.com/dlduy33/Project-Data-Pipeline-for-Recruitment-Start-Up/tree/main/Cassandra)
+- [MySQLDB (using as a Data Warehouse)](https://github.com/dlduy33/Project-Data-Pipeline-for-Recruitment-Start-Up/tree/main/MySQL)
 
 ## Process description
 - Fake Data process
-  - Since this project only received schema and a limited amount of data from the customer, in order to increase the size of the data to test ETL scripts as well as simulate the process of a near real-time ETL pipeline, I built a Python script ([Fake_data_process.py](##)) to fake randomly generate from 1 to 10 records after 'Time = Script running time + 5s sleep'.
+  - Since this project only received schema and a limited amount of data from the customer, in order to increase the size of the data to test ETL scripts as well as simulate the process of a near real-time ETL pipeline, I built a Python script ([Fake_data_process.py](https://github.com/dlduy33/Project-Data-Pipeline-for-Recruitment-Start-Up/blob/main/Fake_data_process.py)) to fake randomly generate from 1 to 10 records after 'Time = Script running time + 5s sleep'.
 - ETL process
   - Since the processing selection is near real-time (batch processing), the first is to compare the latest update time of the data inside the Data Lake and the Data Warehouse.
   - If the condition is False, the comparison will continue.
