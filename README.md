@@ -23,7 +23,7 @@ Since it mainly focuses on building the ETL pipeline so the dataset used for pro
 - Since it simulates an actual project, so we use some programming\tools\framework such as:
   - Python: Use to build the Fake_data_process.py script to combine with ETL pipeline to simulate the near real-time process.
   - Apache Spark: Framework to build the ETL script (Including PySpark & SparkSQL)
-  - Docker: Install Cassandra(as DataLake), MySQL(as Data Warehouse).
-    - Cassandra: raw data would store in a keyspace named 'datalake'.
-    - MySQL: processed data would store in the database named 'DW', the shorten of Data Warehouse.
+  - Docker: Install and run Cassandra as DataLake, MySQL as Data Warehouse.
+    - Cassandra: In the DataLake, we will create a keyspace named 'datalake' to store raw data.
+    - MySQL: With the Data Warehouse, processed data would store in the database named 'DW', which would create by Docker command.
   - DataGrip: is a IDE for SQL, I using it to connect and process data with MySQL and Cassandra.
